@@ -1,0 +1,45 @@
+karyotype = {{ karyotype }}
+
+<ideogram>
+
+<spacing>
+default = 0.002r
+</spacing>
+
+radius = 0.9r
+chromosomes_radius = {{ subject }}
+thickness = 40p
+fill = yes
+show_label = yes
+label_radius = dims(ideogram,radius) + 0.05r
+label_size = 10
+label_center = yes
+
+show_bands = yes
+stroke_color = black
+stroke_thickness = 3p
+
+</ideogram>
+
+<links>
+
+<link>
+file          = {{ linkfile }}
+radius        = 0.95r
+color         = black_a4
+bezier_radius = 0.1r
+thickness     = 1
+ribbon = yes
+</link>
+
+</links>
+
+<image>
+<<include etc/image.conf>>
+dir* = {{ outdir }}
+file* = {{ filename }}
+auto_alpha_steps* = 10
+</image>
+
+<<include etc/colors_fonts_patterns.conf>>
+<<include etc/housekeeping.conf>>

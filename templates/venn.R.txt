@@ -1,0 +1,18 @@
+library("VennDiagram")
+
+venn.plot <- draw.{{ alg }}.venn(
+{{ data }}
+category = c({{ orgs }}),
+imagetype = "svg",
+fill = c({{ colors }}),
+cat.col = c({{ colors }}),
+cat.cex = 1,
+cat.default.pos = 'outer',
+margin = 0.08,
+ind = TRUE
+);
+
+# Writing to file
+tiff(filename = "{{ outname }}", compression = "lzw");
+grid.draw(venn.plot);
+dev.off();

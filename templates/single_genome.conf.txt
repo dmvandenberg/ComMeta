@@ -1,0 +1,127 @@
+karyotype = {{ karyotype }}
+show_tick_labels =      yes
+
+<highlights>
+z =                     0
+fill_color =            dblue
+
+<highlight>
+file =                  {{ frwrd_cds }}
+r0 =                    0.9r
+r1 =                    0.93r
+</highlight>
+
+<highlight>
+file =                  {{ rvrse_cds }}
+r0 =                    0.93r
+r1 =                    0.96r
+</highlight>
+</highlights>
+
+<ideogram>
+radius =                0.9r
+thickness =             40p
+fill =                  yes
+show_label =            yes
+show_ticks =            yes
+label_radius =          dims(ideogram,radius) + 0.06r
+label_size =            15
+label_center =          yes
+label_parallel =        yes
+stroke_color =          black
+stroke_thickness =      3p
+
+<spacing>
+default =               0.002r
+</spacing>
+</ideogram>
+
+<ticks>
+radius =                dims(ideogram,radius_outer)
+color =                 black
+thickness =             2p
+show_label =            yes
+multiplier =            1e-3
+
+<tick>
+spacing =               20000
+size =                  10p
+label_size =            10p
+label_offset =          10p
+format =                %d
+suffix =                kb
+</tick>
+
+<tick>
+spacing =               5000
+size =                  5p
+show_label =            no
+</tick>
+</ticks>
+
+<plots>
+
+<plot>
+type =                  line
+file =                  {{ gc_content }}
+r1 =                    0.85r
+r0 =                    0.75r
+thickness =             2
+min =                   25
+max =                   75
+color =                 white
+orientation =           out
+
+<backgrounds>
+<background>
+color =                 vvlgreen
+y0 =                    50
+</background>
+<background>
+color =                 vvlred
+y1 =                    50
+</background>
+</backgrounds>
+
+<rules>
+<rule>
+condition =             var(value) >= 50
+color =                 dgreen
+</rule>
+
+<rule>
+condition =             var(value) < 50
+color =                 dred
+</rule>
+</rules>
+</plot>
+
+
+<plot>
+type =                  line
+file =                  {{ gc_skew }}
+r1 =                    0.73r
+r0 =                    0.53r
+thickness =             2
+max =                   1
+min =                   -1
+color =                 dblue
+orientation =           out
+
+<rules>
+<rule>
+condition =             var(value) < 0.0
+color =                 orange
+</rule>
+</rules>
+</plot>
+</plots>
+
+<image>
+<<include etc/image.conf>>
+dir* = {{ outdir }}
+file* = {{ filename }}
+</image>
+
+<<include etc/colors_fonts_patterns.conf>>
+<<include etc/housekeeping.conf>>
