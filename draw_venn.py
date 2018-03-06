@@ -13,9 +13,9 @@ def render_template(data, org_list, venn_dir, alg):
     for color in color_l[:alg[0]]:
         colors += '"{}",'.format(color)
     with open("{}/venn_conf.R".format(venn_dir), 'w') as f:
-        r_template = env.get_template("quad_venn.R")
+        r_template = env.get_template("venn.R")
         f.write(r_template.render(alg=alg[1], data=data, orgs=org_list, colors=colors[:-1],
-                                  outname="{}/quad_venn.tiff".format(venn_dir)))
+                                  outname="{}/venn.tiff".format(venn_dir)))
 
 
 def get_org_list(outdir):
