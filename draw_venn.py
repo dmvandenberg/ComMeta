@@ -7,7 +7,7 @@ import console
 
 def render_template(data, org_list, venn_dir, alg):
     """render values into the quad_venn template"""
-    env = Environment(loader=FileSystemLoader('/data/data/David/project/templates'))
+    env = Environment(loader=FileSystemLoader('{}/templates'.format(os.path.abspath(__file__).rsplit("/",1)[0])))
     color_l = ["dodgerblue", "orchid3", "darkorange1", "seagreen3", "goldenrod1"]
     colors = ""
     for color in color_l[:alg[0]]:
