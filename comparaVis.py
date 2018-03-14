@@ -109,7 +109,7 @@ def make_link_file(indir, outdir, cg_guide, threshold, tmc_list, subject, kmer, 
 
 def render_comp_template(circos_filedir, ideogram, links):
     """renders obtained data and files into the circos comp_genome.conf file"""
-    env = Environment(loader=FileSystemLoader('/data/data/David/project/templates'))
+    env = Environment(loader=FileSystemLoader('{}/templates'.format(os.path.abspath(__file__).rsplit("/",1)[0])))
     with open(circos_filedir + '/circos.conf', 'w') as f:
         circos_conf = env.get_template('comp_genome.conf')
         f.write(circos_conf.render(karyotype=ideogram,
