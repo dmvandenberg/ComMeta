@@ -153,7 +153,7 @@ def get_prokka_file(indir, outpath):
 
 def render_template(circos_filedir, ideogram, gc_perc, skew, highlights):
     """renders obtained data and files into single_genome.conf configuration file for circs"""
-    env = Environment(loader=FileSystemLoader('/data/data/David/project/templates'))
+    env = Environment(loader=FileSystemLoader('{}/templates'.format(os.path.abspath(__file__).rsplit("/",1)[0])))
     with open(circos_filedir + '/circos.conf', 'w') as f:
         circos_conf = env.get_template('single_genome.conf')
         f.write(circos_conf.render(karyotype=ideogram, frwrd_cds=highlights[0], rvrse_cds=highlights[1],
