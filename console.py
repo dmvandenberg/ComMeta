@@ -16,8 +16,8 @@ t0 = datetime.now()
 #########################################################################
 # Description:  ComMeta                                                 #
 # Version:      1.0                                                     #
-# Dependencies: Circos, USearch, CompareM, Prodigal, Mummer3, Blast+    #
-#               OrthoANIu, VennDiagram(R package)                       #
+# Dependencies: Circos, CompareM, Prokka, Mummer 3, Blast+, OrthoANIu,  # 
+#               VennDiagram(R package), seblastian                      #
 # Author:       D. van den Berg                                         #
 # TBD: Accept fasta files as input as well (console.py)                 #
 #########################################################################
@@ -55,9 +55,6 @@ def arguments():
     parser.add_argument('--treshold',
                         default=1e-6,
                         help="treshold for overlapping region e-value (default = 1e-6)")
-    parser.add_argument('--no_ident',
-                        action='store_true',
-                        help="skip identity calculation")
     parser.add_argument('--no_dp',
                         action='store_true',
                         help="skip dotplot creation")
