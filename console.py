@@ -1,3 +1,13 @@
+
+#########################################################################
+# Description:  ComMeta                                                 #
+# Version:      1.0                                                     #
+# Dependencies: Circos, CompareM, Prokka, Mummer 3, Blast+, OrthoANIu,  # 
+#               VennDiagram(R package), seblastian                      #
+# Author:       D. van den Berg                                         #
+# TBD: Accept fasta files as reference input as well (console.py)       #
+#########################################################################
+
 # necessary imports
 import argparse
 import os
@@ -12,15 +22,6 @@ import draw_venn
 
 # program start time
 t0 = datetime.now()
-
-#########################################################################
-# Description:  ComMeta                                                 #
-# Version:      1.0                                                     #
-# Dependencies: Circos, CompareM, Prokka, Mummer 3, Blast+, OrthoANIu,  # 
-#               VennDiagram(R package), seblastian                      #
-# Author:       D. van den Berg                                         #
-# TBD: Accept fasta files as input as well (console.py)                 #
-#########################################################################
 
 
 def arguments():
