@@ -2,7 +2,7 @@
 ComMeta is a program usable for analyzing metagenome-derived genomes with a comparative approach. It provides statistics such as the Average Nucleotide Identity (ANI) and the Average Amino acid Identity (AAI) as well as a Reciprocal Best Hit analysis and core- and variable genome analysis. ComMeta also uses Circos to create plots showing either the overlapping region between genomes or information about single genomes (GC%, GC skew, features and contigs). To do the analyses various published tools have been used (listed below).
 
 ## Instalation
-ComMeta makes use of the Biopython and jinja2 python packages, and assusmes the following 3rd party dependencies are on your system path.
+ComMeta is python 2.7 written and makes use of the Biopython and jinja2 python packages. To use ComMeta the following 3rd party dependencies should be on your system path.
 
 - [Prokka](https://github.com/tseemann/prokka) >= v1.12: Seemann, T. (2014). Prokka: rapid prokaryotic genome annotation. Bioinformatics, 30(14), 2068-2069. 
 - [OrthoANIu](https://www.ezbiocloud.net/tools/orthoani) >= v1.2: Lee, I., Kim, Y. O., Park, S. C., & Chun, J. (2016). OrthoANI: an improved algorithm and software for calculating average nucleotide identity. International journal of systematic and evolutionary microbiology, 66(2), 1100-1103.
