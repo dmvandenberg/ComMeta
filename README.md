@@ -11,7 +11,8 @@ ComMeta is python 2.7 written and makes use of the Biopython and jinja2 python p
 - [BLAST+](https://www.ncbi.nlm.nih.gov/books/NBK279690/): Camacho, C. N. C. for B. I. (US). (2008). BLAST (r) Command Line Applications User Manual. National Center for Biotechnology Information (US).
 - [Circos](http://circos.ca/software/download/circos/) >= v0.69-6: Krzywinski, M., Schein, J., Birol, İ., Connors, J., Gascoyne, R., Horsman, D., … Marra, M. A. (2009). Circos: An information aesthetic for comparative genomics. Genome Research , 19(9), 1639–1645. https://doi.org/10.1101/gr.092759.109
 - [Mummer 3](https://sourceforge.net/projects/mummer/files/): Kurtz, S., Phillippy, A., Delcher, A. L., Smoot, M., Shumway, M., Antonescu, C., & Salzberg, S. L. (2004). Versatile and open software for comparing large genomes. Genome Biology, 5(2), R12. https://doi.org/10.1186/gb-2004-5-2-r12
-- [R package](https://cran.r-project.org/web/packages/VennDiagram/VennDiagram.pdf): Chen, H. (2017). VennDiagram: Generate High-Resolution Venn and Euler Plots. Retrieved from https://cran.r-project.org/package=VennDiagram
+- [R package](https://cran.r-project.org/web/packages/VennDiagram/VennDiagram.pdf) >= v1.6.19
+: Chen, H. (2017). VennDiagram: Generate High-Resolution Venn and Euler Plots. Retrieved from https://cran.r-project.org/package=VennDiagram
 
 The above stated 3rd party dependencies may also have dependencies that need to be downloaded on your system.
 
